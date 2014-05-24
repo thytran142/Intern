@@ -1,0 +1,43 @@
+header{
+  /***  CSS Box Model  ***/
+  width:100.00%;
+  height:80px;
+
+  /***  CSS Borders  ***/
+  border-bottom:2px solid rgb(56, 79, 212);
+
+  /***  CSS Text and Font  ***/
+  background-color:rgb(102, 155, 240);
+
+}
+.clearfix:after{
+	clear:both;
+}
+.clearfix:before,.clearfix:after{
+	content:"";
+	display:table;
+}
+header .page-header{
+	width:960px;
+	border-bottom: medium none;
+	position:relative;
+	margin: 0px auto 17px;
+	box-shadow:none;
+}
+body{
+	min-width:960px;
+}
+.paiple .page-header .logo{
+	height: 61px;
+	background-position: -11px 0px;
+	margin-top:12px;
+	width: 275px;
+}
+.paiple .page-header .logo{
+	background: url("img/logo.jpg") no-repeat scroll 0% 0% transparent;
+}
+.page-header .logo{
+	text-indent: -9999em;
+	display:block;
+	float:left;
+}

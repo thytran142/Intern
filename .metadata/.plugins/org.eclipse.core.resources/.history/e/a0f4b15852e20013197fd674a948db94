@@ -1,0 +1,109 @@
+
+#panel-house:hover{
+	background-color:#FCFDF1!important;
+}
+#second-column{
+	width:40%;
+}
+#third-column{
+	width:20%;
+	float:right;
+}
+#adding{
+	float:right;
+	margin-top:-13%;
+}
+#panel-house{
+	padding:5px;
+}
+#panel-house table{
+	width:100%;
+}
+#panel-house table > tbody>tr:first-child>td:first-child{
+}
+#panel-house table>tbody>tr:first-child>td:nth-child(2){
+	width:50%;
+	text-align:right;
+}
+#panel-house table h3{
+	margin-left:10%;
+	margin-top:0%;
+}
+#panel-house table>tbody>tr:first-child>td:nth-child(2) p{
+	margin-left:10%;
+}
+#panel-house table>tbody>tr:first-child>td:nth-child(3){
+	background-color:#D8D8D8 ;
+}
+
+#panel-house .alert-success{
+	margin-right:2%;
+}
+#currentSearch{
+	margin-right:-20%;
+	width:100%;
+	margin-top:20%;
+}
+#currentSearch table{
+	width:100%;
+}
+#currentSearch select{
+	margin-bottom:4%;
+}
+#currentSearch button{
+	margin-bottom:4%;
+}
+#currentSearch table td{
+	vertical-align:top;
+}
+#panel-house{
+	margin-top:2%;
+	margin-left: 1%; 
+	width:98%;
+	
+}
+
+#panel-house .col-left{
+	width:30%;
+	height:100px;
+	float:left;
+}
+#panel-house .col-mid{
+	
+	margin-left:30%;
+	
+}
+#panel-house .col-mid .row1{
+	    border-bottom: 1px solid #E2E2E2;
+    	margin-left:7%;
+   
+}
+
+
+#panel-house .col-mid .row2{
+	margin-left:7%;
+}
+#panel-house .col-mid  img{
+	width:15%;
+	
+}
+
+#panel-house .col-mid .row3{
+	margin-left:7%;
+	
+}
+
+#affix-nav{
+	width:30%;
+}
+#affix-nav select{
+	width:100%;
+}
+#currentSearch .list-inline select{
+	width:48.8%;
+}
+@media screen and  (max-width: 700px) {
+	body{
+		background-color:red;
+	}
+}

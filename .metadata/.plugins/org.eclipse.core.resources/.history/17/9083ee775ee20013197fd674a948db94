@@ -1,0 +1,45 @@
+header{
+  /***  CSS Box Model  ***/
+  width:100.00%;
+  height:80px;
+
+}
+.headerlinks{
+	float: right;
+
+font-weight: bold;
+margin-left: 50%;
+margin-top: -4%;
+}
+
+@media screen and (max-width:926px){
+.headerlinks{
+	margin-left:30%;
+}
+}
+body .paiple{
+	width:90%;
+	margin-left:5%;
+}
+.page-toolbar{
+	display:block;
+}
+.page-toolbar{
+	clear:both;
+	position:relative;
+	float:left;
+	width:100%;
+	padding:0.6em 0.7em 0.5em;
+	color:#FFF;
+	background-color: #208BBF;
+	background-image: linear-gradient (to bottom,#208BBF, #165394);
+	box-shadow: 0px 2px 0px 0px #E0DFE0;
+}
+.loginTab{
+	float:right;
+	margin-top:0px;
+}
+.logo{
+	width:11%;
+	margin-left:2%;
+}

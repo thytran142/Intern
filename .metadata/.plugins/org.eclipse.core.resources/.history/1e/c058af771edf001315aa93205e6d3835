@@ -1,0 +1,25 @@
+header{
+  /***  CSS Box Model  ***/
+  width:100.00%;
+  height:80px;
+
+
+
+  /***  CSS Text and Font  ***/
+  font-size:40px;
+  
+ 
+  font-weight:bold;
+
+}
+.headerlinks{
+	float:right;
+}
+#menu{
+	width:100%;
+	height:35px;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+	background-color: #EBE6E6;
+}

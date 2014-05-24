@@ -1,0 +1,35 @@
+.clearfix:after{
+	clear:both;
+}
+.clearfix:before,.clearfix:after{
+	content:"";
+	display:table;
+}
+header .page-header{
+	width:960px;
+	border-bottom: medium none;
+	box-shadow:none;
+	margin:0px auto 17px;
+	position: relative;
+}
+.logo{
+	width:275px;
+	height:61px;
+	background-position: -11px 0px;
+	margin-top: 12px;
+}
+.logo{
+	background: url('/img/logo.jpg') no-repeat scroll 0% 0% transparent;
+}
+.page-header, .logo{
+	float:left;
+	text-indent: -9999em;
+	display:block;
+}
+.page-header .headerlinks{
+	float:right;
+	width:630px;
+	text-align: left;
+	margin:0px;
+}
+

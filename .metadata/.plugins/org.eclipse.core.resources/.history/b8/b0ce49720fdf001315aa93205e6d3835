@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>List view</title>
+		<meta name="description" content="">
+		<meta name="author" content="Tran Thy">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		
+		<!--Bootstrap-->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- custom style for this page-->
+		<link href="css/logo.css" rel="stylesheet">
+		<link href="css/tabMenu.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<!--navigation logo-->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:10%;">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color: #0066FF;"><h3>Paiple Logo<h3></h3></a>
+			</div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#"><b>Language</b></a>
+                    </li>
+                    <li>
+                        <a href="#"><b>Sign up</b></a>
+                    </li>
+                    <li>
+                        <a href="#"><b>Log in</b></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+			
+		</div><!--end container-->
+		</nav><!--end navigation menu-->
+		<!--Tab menu-->
+		<div class="container">
+			<div class="masthead">
+				<ul class="nav nav-justified">
+					<li class="active"><a href="#">Current tab</a></li>
+					<li><a href="#">Tab 1</a></li>
+					<li><a href="#">Tab 2</a></li>
+					<li><a href="#">Tab 3</a></li>
+					<li><a href="#">Tab 4</a></li>
+					<li><a href="#">Tab 5</a></li>
+					<li><a href="#">Tab 6</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--end Tab menu-->
+		
+		
+	</body>
+	<!--Jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+</html>

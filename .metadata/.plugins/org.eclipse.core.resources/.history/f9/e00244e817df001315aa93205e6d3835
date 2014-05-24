@@ -1,0 +1,26 @@
+header{
+  /***  CSS Box Model  ***/
+  width:100.00%;
+  height:80px;
+
+  /***  CSS Borders  ***/
+  border-bottom:2px solid rgb(56, 79, 212);
+
+  /***  CSS Text and Font  ***/
+  background-color:rgb(102, 155, 240);
+
+}
+.clearfix:after{
+	clear:both;
+}
+.clearfix:before,.clearfix:after{
+	content:"";
+	display:table;
+}
+header .page-header{
+	width:960px;
+	border-bottom: medium none;
+	position:relative;
+	margin: 0px auto 17px;
+	box-shadow:none;
+}

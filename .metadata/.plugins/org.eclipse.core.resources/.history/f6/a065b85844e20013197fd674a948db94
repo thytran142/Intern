@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Listing Page </title>
+		<meta name="description" content="">
+		<meta name="author" content="Tran Thy">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<!--Bootstrap-->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/header.css" rel="stylesheet">
+		<link href="css/footer.css" rel="stylesheet">
+		<link href="css/body.css" rel="stylesheet">
+		
+	<!--Jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/dropdown.js"></script>
+	<script src="js/tab.js"></script>
+	<script src="js/modal.js"></script>
+	<script src="js/popover.js"></script>
+	<script src="js/affix.js"></script>
+	</head>
+	<!--Javascript function-->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			//This is to declare the current search field to be hidden at the beginning
+			$('.option1').hide();
+			$('.option2').hide();
+			$('.extend').hide();
+			$('#minus').hide();
+			$('#plus').show();
+			//This is to show div based on the looking for selection
+			$('#looking').on('change',function(){
+				if(this.value=='1'){
+					$('.option1').show();
+					$('.option2').hide();
+				}else if(this.value=='2'){
+					$('.option2').show();
+					$('.option1').hide();
+				}
+				else{
+					$('.option1').hide();
+					$('.option2').hide();
+				}
+			});
+			//This is to open the modal search 
+			$('#viewLocation').click(function(){
+				$('#location').modal('show');
+			});
+			//This is to open more options area or hide it when click it again
+			$('#extendOneMore').click(function()
+			{
+				$('.extend').toggle();
+				$('#minus').toggle();
+				$('#plus').toggle();
+			}
+			);
+			//This is to click the view map button and show the map 
+			$('#map').click(function(){
+				$('#sampleMap').hide();
+			}
+			);
+			
+			$('#list').click(function()
+			{
+				$('#sampleMap').show();
+			}
+		);
+			
+		
+			
+			
+		
+		});
+	</script>
+	<body >
+		<div class="paiple">
+		<!--show the logo-->
+		<header>
+
+			<img class="logo" src="img/logo.png"/>
+			<div class="loginTab">
+				<ul class="nav nav-pills">
+					<li><a href="#">Create an account</a></li>
+					<li><a href="#">Log in</a></li>
+					<li><a href="#">Language<span class="glyphicon glyphicon-chevron-down"></span></a></li>
+				</ul>
+			</div>
+			<div class="headerlinks">
+				<!--tab menu-->
+				<ul class="nav nav-pills">
+					<li class="active"><a href="#">Search</a></li>
+					<li><a href="#">My watch</a></li>
+					<li><a href="#">My list</a></li>
+					<li><a href="#">Inbox</a></li>
+					<li><a href="#">My profile</a></li>
+					
+				</ul>
+				<!--end tab menu-->
+			</div>
+		</header>
+		<!--end header-->
+		<div class="page-toolbar">
+			
+		</div>
+		
+		<!--body part-->
+		<div class="well">
+		<div class="row" style="margin-top:4%;width:105%;">
+			<!--part show list-->
+			<div class="col-md-8"  style="margin-left:1%;">
+
+				<ul class="nav nav-tabs" >
+					<li class="active">
+						<a href="#listView" data-toggle="tab" id="list">List View <span class="badge">42</span></a>
+					</li>
+					<li >
+						<a href="#mapView" data-toggle="tab" id="map">Map view</a>
+					</li>
+				</ul>
+				<!--<p style="margin-top:-4%;float:right;">Results found<span class="badge">42</span></p><!-->
+				<div class="tab-content">
+					<div class="tab-pane active" id="listView">
+				<div class="panel panel-info" style="margin-top:4%;">
+					<label style="padding-left:3%;padding-right:2%; ">Sort By</label>
+					<div class="btn-group">
+						<button type="button" class="btn btn-default active">
+							Price
+						</button>
+						<button type="button" class="btn btn-default">
+							Guest rating
+						</button>
+						<button type="button" class="btn btn-default">
+							Hotel name
+						</button>
+						<button type="button" class="btn btn-default">
+							Star rating
+						</button>
+						<button type="button" class="btn btn-default">
+							Most popular
+						</button>
+					</div>
+					<!-- Rows of listing views--------------------------------------------------------------------->
+					<!--row1-->
+					<div id="panel-house" class="panel panel-default">
+					<div class="col-left">
+						<img src="img/house2.jpg" alt="house1" class="img-thumbnail">
+					</div>
+					<div class="col-mid">
+						<table>
+							<tr style= "border-bottom: 1px solid #E2E2E2;">
+								<td><h3>The Greenwich (D28) Condominium </h3>
+									<p style="margin-left:10%;margin-top:-2%;">Posted on 21 May, 2014 </p>
+								</td>
+								<td><h3><span class="label label-primary">Rent it now</span></h3><h4 style="color:red;font-weight:bold;">$1,750/month</h4></td>
+							</tr>
+							<tr>
+								<td style="padding-left:4%;">
+									<div>
+									<img src="img/bath_room.png"> <span class="badge">3</span>
+									<img src="img/bed.png"> <span class="badge">4</span>
+									</div>
+									Furnish: <b>Fully furnished</b><br>
+									<strong class="alert-success"> 80% Match </strong>
+									<button type="button" class="btn btn-success btn-xs">
+										<span class="glyphicon glyphicon-heart"></span> Add to my watch list
+									</button>
+								</td>
+								<td style="text-align:right;"><div style="font-size:90%;">Or alternatively, bid for your rent</div>
+									<h5>Time left: 3 days 13 hours</h5>
+									<div style="font-size:90%;margin-top:-3%;">(Close time: 2014 May 25, 19:00pm)</div>
+									<h5 style="display:inline;margin-top:1%;">Current bid:</h5><h4 style="font-weight:bold;color:red;display:inline;">$1,250 month</h4>
+									<p>[xxx bids]<span class="glyphicon glyphicon-fire"></span></p>
+							</td>
+							</tr>
+					
+						</table>
+					</div>
+					</div>
+					<!--end row1-->
+					<!--row2-->
+						<div id="panel-house" class="panel panel-default">
+					<div class="col-left">
+						<img src="img/house2.jpg" alt="house1" class="img-thumbnail">
+					</div>
+					<div class="col-mid">
+						<table>
+							<tr style= "border-bottom: 1px solid #E2E2E2;">
+								<td><h3>The Minton(D19) Condominium </h3>
+									<p style="margin-left:10%;margin-top:-2%;">Posted on 21 May, 2014 </p>
+								</td>
+								<td><h3><span class="label label-primary">Rent it now</span></h3><h4 style="color:red;font-weight:bold;">$1,750/month</h4></td>
+							</tr>
+							<tr>
+								<td style="padding-left:4%;">
+									<div>
+									<img src="img/bath_room.png"> <span class="badge">3</span>
+									<img src="img/bed.png"> <span class="badge">4</span>
+									</div>
+									Furnish: <b>Fully furnished</b><br>
+									<strong class="alert-success"> 80% Match </strong>
+									<button type="button" class="btn btn-success btn-xs">
+										<span class="glyphicon glyphicon-heart"></span> Add to my watch list
+									</button>
+								</td>
+								<td style="text-align:right;"><div style="font-size:90%;">Or alternatively, bid for your rent</div>
+									<h5>Time left: 3 days 13 hours</h5>
+									<div style="font-size:90%;margin-top:-3%;">(Close time: 2014 May 25, 19:00pm)</div>
+									<h5 style="display:inline;margin-top:1%;">Current bid:</h5><h4 style="font-weight:bold;color:red;display:inline;">$1,250 month</h4>
+									<p>[xxx bids]<span class="glyphicon glyphicon-fire"></span></p>
+							</td>
+							</tr>
+					
+						</table>
+					</div>
+					</div>
+					<!--end row2-->
+
+					<!--Row3-->
+							<div id="panel-house" class="panel panel-default">
+					<div class="col-left">
+						<img src="img/house3.jpg" alt="house1" class="img-thumbnail">
+					</div>
+					<div class="col-mid">
+						<table>
+							<tr style= "border-bottom: 1px solid #E2E2E2;">
+								<td><h3>The Kentish Green (D08) Apartment </h3>
+									<p style="margin-left:10%;margin-top:-2%;">Posted on 21 May, 2014 </p>
+								</td>
+								<td><h3><span class="label label-primary">Rent it now</span></h3><h4 style="color:red;font-weight:bold;">$1,750/month</h4></td>
+							</tr>
+							<tr>
+								<td style="padding-left:4%;">
+									<div>
+									<img src="img/bath_room.png"> <span class="badge">3</span>
+									<img src="img/bed.png"> <span class="badge">4</span>
+									</div>
+									Furnish: <b>Fully furnished</b><br>
+									<strong class="alert-success"> 80% Match </strong>
+									<button type="button" class="btn btn-success btn-xs">
+										<span class="glyphicon glyphicon-heart"></span> Add to my watch list
+									</button>
+								</td>
+								<td style="text-align:right;"><div style="font-size:90%;">Or alternatively, bid for your rent</div>
+									<h5>Time left: 3 days 13 hours</h5>
+									<div style="font-size:90%;margin-top:-3%;">(Close time: 2014 May 25, 19:00pm)</div>
+									<h5 style="display:inline;margin-top:1%;">Current bid:</h5><h4 style="font-weight:bold;color:red;display:inline;">$1,250 month</h4>
+									<p>[xxx bids]<span class="glyphicon glyphicon-fire"></span></p>
+							</td>
+							</tr>
+					
+						</table>
+					</div>
+					</div>
+					<!--end row3-->
+					<!--row4-->
+							<div id="panel-house" class="panel panel-default">
+					<div class="col-left">
+						<img src="img/house3.jpg" alt="house1" class="img-thumbnail">
+					</div>
+					<div class="col-mid">
+						<table>
+							<tr style= "border-bottom: 1px solid #E2E2E2;">
+								<td><h3>Vancanza @ East (D14) Condominium </h3>
+									<p style="margin-left:10%;margin-top:-2%;">Posted on 21 May, 2014 </p>
+								</td>
+								<td><h3><span class="label label-primary">Rent it now</span></h3><h4 style="color:red;font-weight:bold;">$1,750/month</h4></td>
+							</tr>
+							<tr>
+								<td style="padding-left:4%;">
+									<div >
+									<img src="img/bath_room.png"> <span class="badge">3</span>
+									<img src="img/bed.png"> <span class="badge">4</span>
+									</div>
+									Furnish: <b>Fully furnished</b><br>
+									<strong class="alert-success"> 80% Match </strong>
+									<button type="button" class="btn btn-success btn-xs">
+										<span class="glyphicon glyphicon-heart"></span> Add to my watch list
+									</button>
+								</td>
+								<td style="text-align:right;"><div style="font-size:90%;">Or alternatively, bid for your rent</div>
+									<h5>Time left: 3 days 13 hours</h5>
+									<div style="font-size:90%;margin-top:-3%;">(Close time: 2014 May 25, 19:00pm)</div>
+									<h5 style="display:inline;margin-top:1%;">Current bid:</h5><h4 style="font-weight:bold;color:red;display:inline;">$1,250 month</h4>
+									<p>[xxx bids]<span class="glyphicon glyphicon-fire"></span></p>
+							</td>
+							</tr>
+					
+						</table>
+					</div>
+					</div>
+					<!--end row4-->
+					<!--row 5-->
+							<div id="panel-house" class="panel panel-default">
+					<div class="col-left">
+						<img src="img/house2.jpg" alt="house1" class="img-thumbnail">
+					</div>
+					<div class="col-mid">
+						<table>
+							<tr style= "border-bottom: 1px solid #E2E2E2;">
+								<td><h3>The Greenwich (D28) Condominium </h3>
+									<p style="margin-left:10%;margin-top:-2%;">Posted on 21 May, 2014 </p>
+								</td>
+								<td><h3><span class="label label-primary">Rent it now</span></h3><h4 style="color:red;font-weight:bold;">$1,750/month</h4></td>
+							</tr>
+							<tr>
+								<td style="padding-left:4%;">
+									<div>
+									<img src="img/bath_room.png"> <span class="badge">3</span>
+									<img src="img/bed.png"> <span class="badge">4</span>
+									</div>
+									Furnish: <b>Fully furnished</b><br>
+									<strong class="alert-success"> 80% Match </strong>
+									<button type="button" class="btn btn-success btn-xs">
+										<span class="glyphicon glyphicon-heart"></span> Add to my watch list
+									</button>
+								</td>
+								<td style="text-align:right;"><div style="font-size:90%;">Or alternatively, bid for your rent</div>
+									<h5>Time left: 3 days 13 hours</h5>
+									<div style="font-size:90%;margin-top:-3%;">(Close time: 2014 May 25, 19:00pm)</div>
+									<h5 style="display:inline;margin-top:1%;">Current bid:</h5><h4 style="font-weight:bold;color:red;display:inline;">$1,250 month</h4>
+									<p>[xxx bids]<span class="glyphicon glyphicon-fire"></span></p>
+							</td>
+							</tr>
+					
+						</table>
+					</div>
+					</div>
+					<!--end row 5-->
+					<!-- row 6-->
+							<div id="panel-house" class="panel panel-default">
+					<div class="col-left">
+						<img src="img/house2.jpg" alt="house1" class="img-thumbnail">
+					</div>
+					<div class="col-mid">
+						<table>
+							<tr style= "border-bottom: 1px solid #E2E2E2;">
+								<td><h3>The Greenwich (D28) Condominium </h3>
+									<p style="margin-left:10%;margin-top:-2%;">Posted on 21 May, 2014 </p>
+								</td>
+								<td><h3><span class="label label-primary">Rent it now</span></h3><h4 style="color:red;font-weight:bold;">$1,750/month</h4></td>
+							</tr>
+							<tr>
+								<td style="padding-left:4%;">
+									<div style="margin-top:-10%;">
+									<img src="img/bath_room.png"> <span class="badge">3</span>
+									<img src="img/bed.png"> <span class="badge">4</span>
+									</div>
+									Furnish: <b>Fully furnished</b><br>
+									<strong class="alert-success"> 80% Match </strong>
+									<button type="button" class="btn btn-success btn-xs">
+										<span class="glyphicon glyphicon-heart"></span> Add to my watch list
+									</button>
+								</td>
+								<td style="text-align:right;"><div style="font-size:90%;">Or alternatively, bid for your rent</div>
+									<h5>Time left: 3 days 13 hours</h5>
+									<div style="font-size:90%;margin-top:-3%;">(Close time: 2014 May 25, 19:00pm)</div>
+									<h5 style="display:inline;margin-top:1%;">Current bid:</h5><h4 style="font-weight:bold;color:red;display:inline;">$1,250 month</h4>
+									<p>[xxx bids]<span class="glyphicon glyphicon-fire"></span></p>
+							</td>
+							</tr>
+					
+						</table>
+					</div>
+					</div>
+					<!--end row 6-->
+
+				</div><!--end panel-->
+					<ul class="pagination" style="margin-left:2%;margin-top:-1%;">
+      				<li><a href="#">&laquo;</a></li>
+      				<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+      				<li><a href="#">2</a></li>
+      				<li><a href="#">3</a></li>
+      				<li><a href="#">4</a></li>
+      				<li><a href="#">5</a></li>
+      				<li><a href="#">6</a></li>
+      				<li><a href="#">7</a></li>
+      				<li><a href="#">8</a></li>
+      				<li><a href="#">9</a></li>
+      				<li><a href="#">10</a></li>
+      				<li><a href="#">11</a></li>
+      				<li><a href="#">12</a></li>
+      				<li><a href="#">13</a></li>
+     			    <li><a href="#">&raquo;</a></li>
+   </ul>
+   					<select class="form-control" style="width:8%;float:right;margin-top:-1%;">
+   						<option>3</option>
+   						<option>5</option>
+   						<option>7</option>
+   					</select>
+			</div><!--end col-md-8-->
+			<!--end part show list-->
+			<!--Map view--------------------------->
+			<div class="tab-pane" id="mapView">
+				<img id ="show" src="img/map4.jpg" style="margin-top:1%;width:100%;"/>
+				<!--pop up show-->
+				
+					
+				<!--end pop up show-->
+				
+				<form class="form-inline" role="form" style="margin-top:1%;">
+  				<div class="form-group" style="width:80%;">
+   			 <label >Show place of interests</label>
+   			
+      <select class="form-control">
+      	<option>Amenities</option>
+      	<option>Shopping malls</option>
+      	<option>Hospitals</option>
+      </select>
+      <select class="form-control">
+      	<option>Schools</option>
+      	<option>option 1</option>
+      </select>
+      <select class="form-control">
+      	<option>Transit</option>
+      	<option>option 2</option>
+      </select>
+		</div>
+		<div class="form-group">
+			<label>Result shown</label>
+			<select class="form-control">
+				<option>10</option>
+				<option>20</option>
+			</select>
+		</div>
+  
+  </form>
+			</div>
+			</div>
+			</div>
+			
+			<div   id="affix-nav" class="col-md-4 " >
+				
+				<div class="panel panel-primary" id="currentSearch"  >
+					<div class="panel-heading">
+						<h3 class="panel-title">Current search</h3>
+					</div>
+					<div class="panel-body">
+						<!--Search form-->
+						<table>
+							<col width="45%">
+							<tr>
+								<td><label>Looking for</label></td>
+								<td><select id="looking">
+									<option>All types </option>
+									<option value="1">Whole unit</option>
+									<option value="2">Private room</option>
+									<option value="3">Shared room</option>
+									</select></td>
+							</tr>
+							<tr class="option1">
+								<td ><label>Bedroom</label></td>
+								<td>
+									<select  >
+									<option>Any</option>
+									<option>Studio or 1 bedroom</option>
+									<option>2 bedrooms</option>
+									<option>3 bedrooms</option>	
+								</select>
+								</td>
+							</tr>
+							<tr class="option1">
+								<td><label>Bathroom</label></td>
+								<td><select  >
+									<option>Any</option>
+									<option>1 bathroom</option>
+									<option>2 bathrooms</option>
+									<option>3 bathrooms</option>
+								</select>	</td>
+							</tr>
+							<tr class="option2">
+								<td><label>Room Type</label></td>
+								<td><select  >
+									<option>Any</option>
+									<option>Master room</option>
+									<option>Common room</option>
+								</select></td>
+							</tr>
+							<tr class="option2">
+								<td><label>Bath room</label></td>
+								<td><select >
+									<option>Any</option>
+									<option>Independent</option>
+									
+								</select></td>
+							</tr>
+							<tr>
+								<td><label>Propery type</label></td>
+								<td><select >
+										<option>All types</option>
+										<option>Apartment / Condo</option>
+										<option>HDB</option>
+										<option>Landed house</option>
+									</select></td>
+							</tr>
+							<tr>
+								<td><label>Estimated price</label</td>
+								<td>	<select style="width:35%;" >
+									<option>Min</option>
+									<option>0 SGD</option>
+									<option>1000 SGD</option>
+									<option>2000 SGD</option>
+									<option>3000 SGD</option>
+								</select>
+								<select style="width:40%;" >
+									<option>Max</option>
+									<option>0 SGD</option>
+									<option>1000 SGD</option>
+									<option>2000 SGD</option>
+									<option>50000 SGD</option>
+								</select>
+								</td>
+							</tr>
+							<tr>
+								<td><label>Location</label></td>
+								<td><button style="width:100%;" id="viewLocation" class="btn btn-primary btn-sm" data-target=".bs-example-modal-lg" >
+									View location
+								</button></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></span><button style="width:100%;" type="button" class="btn btn-default btn-sm" id="extendOneMore">
+									<span id="plus" class="glyphicon glyphicon-plus"></span>
+									<span id="minus" class="glyphicon glyphicon-minus"></span>
+									More options
+									</button>
+								</td>
+							</tr>
+							<tr class="extend">
+								<td><label>Furnishing</label></td>
+								<td><select >
+										<option>Any</option>
+										<option>Fully furnished</option>
+										<option>Partially furnished</option>
+										<option>Unfurnished</option>
+									</select></td>
+							</tr>
+							<tr class="extend">
+								<td><label>Cooking</label></td>
+								<td><select  >
+										<option>Any</option>
+										<option>Yes</option>
+										<option>No</option>
+										<option>Light</option>
+									</select></td>
+							</tr>
+							<tr class="extend">
+								<td><label>Floor size</label></td>
+								<td><select>
+									<option>Min</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+								</select>
+								<select >
+									<option>Max</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+								</td>
+							</tr>
+							<tr class="extend">
+								<td><label>Preferred move in date</label></td>
+								<td><select>
+										<option>Flexible</option>
+										<option>Immediately</option>
+										<option>Within two weeks</option>
+										<option>Within one month</option>
+										<option>Within three months</option>
+									</select></td>
+							</tr>
+							<tr class="extend">
+								<td><label>Number of people staying</label></td>
+								<td><select >
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6+</option>
+									</select></td>
+							</tr>
+							<tr class="extend">
+								<td rowspan="4"><label>Features</label></td>
+								<td><label class="checkbox-in-line">
+									<input type="checkbox">  Air conditioner
+								</label></td>
+							</tr>
+							<tr class="extend">
+								<td><label class="checkbox-in-line"><input type="checkbox">  Television</label></td>
+							</tr>
+							<tr class="extend">
+								<td><label class="checkbox-in-line"><input type="checkbox">  Washing Machine</label></td>
+							</tr>
+							<tr class="extend">
+								<td><label class="checkbox-in-line"><input type="checkbox"> Refregerator</label></td>
+							</tr>
+						</table>
+						<!-- modal for view location-->
+							<div class="modal fade bs-example-modal-lg" id="location" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Choose location</h4>
+      </div>
+      <div class="modal-body">
+        <div class="bs-example bs-example-tabs">
+    <ul id="myTab" class="nav nav-tabs">
+      <li class="active"><a href="#district" data-toggle="tab">District</a></li>
+      <li><a href="#school" data-toggle="tab">Near school</a></li>
+      <li><a href="#mrt" data-toggle="tab">Near MRT</a></li>
+      <li class="dropdown">
+        <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Near amenities <b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+          <li><a href="#dropdown1" tabindex="-1" data-toggle="tab">Near shopping malls</a></li>
+          <li><a href="#dropdown2" tabindex="-1" data-toggle="tab">Near hospital</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade in active" id="district">
+      <table class="table" style="font-size:11px;">
+      	<tr>
+      		<td>
+				<div class="checkbox">
+				<label>
+				<input type="checkbox" checked>
+				Cecil,Marina,Raffles Place, people's part, boat quay, marina </label>
+				</div>
+			</td>
+			<td>
+				<div class="checkbox" checked>
+				<label>
+				<input type="checkbox">
+				Thomson,Watten Estate,Novena,Newton </label>
+				</div>
+			</td>
+  			<td>
+				<div class="checkbox" checked>
+				<label>
+				<input type="checkbox">
+				Upper Bukit Timah,Ulu Pandan,Clementi Park</label>
+				</div>
+			</td>
+			
+	</tr>
+			<tr>
+				<td>
+				<div class="checkbox" checked>
+				<label>
+				<input type="checkbox">
+				Anson Road, Tanjong Pagar,Chinatown</label>
+				</div>
+			</td>
+			<td>
+				<div class="checkbox" checked>
+				<label>
+				<input type="checkbox">
+				Seragoon, Toa Payoh, Balestier</label>
+				</div>
+			</td>
+			<td>
+				<div class="checkbox" checked>
+				<label>
+				<input type="checkbox">
+				Lakeside,Jurong,Boonlay,Tuas</label>
+				</div>
+			</td>
+			</tr>
+			<tr>
+				<td>
+				<div class="checkbox" checked>
+				<label>
+				<input type="checkbox">
+				Queenstown, Tiong Bahru, Alexandra, Commonwealth</label>
+				</div>
+			</td>
+			<td>
+				<div class="checkbox" checked>
+				<label>
+				<input type="checkbox">
+				Braddell, Macpherson,Potong Pasir</label>
+				</div>
+			</td>
+			<td>
+				<div class="checkbox" checked>
+				<label>
+				<input type="checkbox">
+				Choa Ku Kang, Bukit Batok, Dairy Farm, Hillview, Bukit Panjang</label>
+				</div>
+			</td>
+			</tr>
+			<tr>
+				<td>
+				<div class="checkbox" checked>
+				<label>
+				<input type="checkbox">
+				Telok Blangah,Mount Faber, Habourfont, Sentosa</label>
+				</div>
+			</td>
+			<td>
+				<div class="checkbox" checked>
+				<label>
+				<input type="checkbox">
+				Sims, Paya Lebar, Geylang, Eunos</label>
+				</div>
+			</td>
+			<td>
+				<div class="checkbox" checked>
+				<label>
+				<input type="checkbox">
+				Woodgrove, Kranji, Woodlands</label>
+				</div>
+			</td>
+			</tr>
+      </table>
+      	
+      </div>
+      <div class="tab-pane fade" id="school" >
+   		<form class="form-horizontal" role="form" >
+  		<div class="form-group">
+   		 <label  class="col-sm-2 control-label">School</label>
+   		 <div class="col-sm-10">
+    	  <select class="form-control" style="font-size:11px;" >
+    	  	<option>AHMAD IBRAHIM SECONDARY SCHOOL</option>
+    	  	<option>ADMIRALTY PRIMARY SCHOOL</option>
+    	  	<option>.... And more</option>
+    	  </select>
+   		 </div>
+  		</div>
+  		</form>
+  		<img src="img/map1.png" style="margin-top:5%;width:100%;">
+      </div>
+      <div class="tab-pane fade" id="mrt">
+      <form class="form-horizontal" role="form"  >
+  		<div class="form-group">
+   		 <label  class="col-sm-2 control-label">MRT</label>
+   		 <div class="col-sm-10">
+    	  <select class="form-control" style="font-size:12px;margin-top:1%;" >
+    	  	<option>Bencoolen MRT</option>
+    	  	<option>Kent Ridge MRT</option>
+    	  	<option>.... And more</option>
+    	  </select>
+   		 </div>
+  		</div>
+  		</form>
+  		<img src="img/map2.png" style="width:100%;">
+      </div>
+      <div class="tab-pane fade" id="dropdown1">
+     	<form class="form-horizontal" role="form"  >
+  		<div class="form-group">
+   		 <label  class="col-sm-2 control-label" style="width:30%;margin-left:-7%;">Shopping malls</label>
+   		 <div class="col-sm-10">
+    	  <select class="form-control" style="font-size:12px;margin-top:1%;" >
+    	  	<option>SOMER SET</option>
+    	  	<option>Vivo City</option>
+    	  	<option>.... And more</option>
+    	  </select>
+   		 </div>
+  		</div>
+  		</form>
+  		<img src="img/map3.png" style="width:100%;">
+      </div>
+      <div class="tab-pane fade" id="dropdown2">
+        <form class="form-horizontal" role="form"  >
+  		<div class="form-group">
+   		 <label  class="col-sm-2 control-label">Hospital</label>
+   		 <div class="col-sm-10">
+    	  <select class="form-control" style="font-size:12px;margin-top:1%;" >
+    	  	<option>NUH</option>
+    	  	<option>Changi</option>
+    	  	<option>.... And more</option>
+    	  </select>
+   		 </div>
+  		</div>
+  		</form>
+  		<img src="img/map3.png" style="width:100%;">
+      </div>
+    </div>
+  </div><!-- /example -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Reset</button>
+        <button type="button" class="btn btn-primary">Select location</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+						<!-- end modal for view location-->
+							
+							
+							
+							
+							
+							
+							
+							
+							
+								
+							
+					<button type="button" class="btn btn-primary" style="width:100%;">Search</button>		
+					</div><!--end panel body-->
+				</div><!--end panel-->
+				
+				<!-- map-->
+				<img id="sampleMap" src="img/sampleMap.JPG" style="width:100%;"/>
+				<!--end map-->
+
+			</div><!--end col-md-4-->
+		</div><!--end row-->
+		
+		<div id="footer" style="margin-left:-2%;">
+			<div class="container">
+				<ul class="nav nav-pills" style="width:180%;margin-left:-30%;">
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Advertise with us</a></li>
+					<li><a href="#">Workshops and seminar</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">Terms and conditions</a></li>
+					<li><a href="#">Privacy policy</a></li>
+					<li><a href="#">Personal data protection</a></li>
+					<li><a href="#">Contact us</a></li>
+				</ul>
+			</div>
+		</div>
+		</div><!--end well div-->
+		</div><!--end paiple body-->
+		
+	</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>table</title>
+		<meta name="description" content="">
+		<meta name="author" content="Tran Thy">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	</head>
+
+	<body style="background-color:#FCF7F7;">
+		<!--For the facebook like plugin-->
+		<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+		<!--end facebook like plugins-->
+				<table style="margin-left:30%;width:40%;">
+					<tr>
+						<td>Having trouble view this email?<a href="#"> Click here to view it in your browser</a></td>
+					</tr>
+					<tr>
+						<td><img src="abc.png"></td>
+					</tr>
+				</table>
+				<table style="width:32%;margin-left:33%;">
+					<tr>
+						<td><div class="fb-like" data-href="#" data-send="true" data-width="450" data-show-face="true"></div></td>
+						<td><h2 style="color:red;font-weight:bold;">We found you a match!</h2></td>
+					</tr>
+					<tr>
+						<td><img src="abc1.png"></img></td>
+						<td style="padding:15px;">
+							We are excited to have you here, and can't wait for you to start enjoying our service. We have found a match for you and both of you have a common friend. Do reply this email if you are interested to find out more about your potential life partner.
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">25 years old, lives in Mumbai</td>
+					
+					</tr>
+				</table>
+				<style>
+					#share-button{
+						width:35px;
+						padding:5px;
+						border:0;
+						box-shadow:0;
+					}
+				</style>
+				<table style="margin-top:2%;margin-left:48%;">
+					<tr>
+						<td><a id="share-button" href="http://www.facebook.com/sharer.php?u=http://www.simplesharebuttons.com" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
+						</td>
+						<td class="fb-share-button" data=href="%"></td>
+					</tr>
+				</table>
+			
+		</div>
+	</body>
+</html>

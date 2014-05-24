@@ -1,0 +1,32 @@
+header{
+  /***  CSS Box Model  ***/
+  width:100.00%;
+  height:80px;
+
+  /***  CSS Borders  ***/
+  border-bottom:2px solid rgb(212, 200, 206);
+
+  /***  CSS Text and Font  ***/
+  font-size:40px;
+  
+ 
+  font-weight:bold;
+
+}
+.headerlinks{
+	float:right;
+	width:630px;
+	text-align:left;
+	margin:0px;
+	background-color:#006699;
+	vertical-align:baseline;
+	position:fixed;
+}
+div{
+	padding:0px;
+	border:0px none;
+	outline:0px none;
+	vertical-align:baseline;
+	background: none repeat scroll 0% 0% transparent;
+	line-height:normal;
+}

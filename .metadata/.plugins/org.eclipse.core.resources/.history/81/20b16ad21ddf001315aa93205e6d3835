@@ -1,0 +1,17 @@
+header{
+  /***  CSS Box Model  ***/
+  width:100.00%;
+  height:80px;
+
+
+
+  /***  CSS Text and Font  ***/
+  font-size:40px;
+  
+ 
+  font-weight:bold;
+
+}
+.headerlinks{
+	float:right;
+}
